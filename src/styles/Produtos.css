@@ -1,0 +1,78 @@
+.mProdutos {
+    background-color: #515B3A;
+    color: #F3FFD8;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .textSection {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  
+  .textSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .textSection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .mapSection {
+    width: 90%;
+    margin: 20px 0;
+  }
+  
+  .map {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .plansSection {
+    text-align: center;
+    margin-top: 30px;
+    width: 90%;
+  }
+  
+  .plansSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #A9C980; /* Tom verde claro */
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .plan {
+    background-color: #3C4430; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #F3FFD8;
+  }
+  
+  .plan p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #F3FFD8;
+  }
+  

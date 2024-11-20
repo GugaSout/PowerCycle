@@ -1,25 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .header{
     background-image: linear-gradient(0deg, #F3FFD8, #F2F99A);
-    height: 20vh;
+    height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding: 20px;
+    position: relative;
 }
 .header h1{
     color: #353D2F;
     font-size: 2.5em;
-    margin-bottom: 20px;
 }
 .navHeader{
-    width: 40vw;
+    width: 20vw;
     display: flex;
-    
     justify-content: space-around;
+    margin-left: 20px;
 }
 .liHeader{
     text-decoration: none;
     color: #353D2F;
     font-size: 1.2em;
+    transition: 0.5s;
+    border-bottom: 2px solid #353D2F;
+    padding: 2px 3px;
+    
+    }
+.liHeader:hover{
+    border-radius: 5px; 
+    background-color: #b8bd77;
+}
+.btnlogin{
+    background-color: #353D2F;
+    color: #F3FFD8;
+    padding: 10px;
+    position: absolute;
+    right: 40px;
+    border-radius: 10px;
+    border: 2px solid #353D2F;
+    transition: 0.5s;
+}
+.btnlogin:hover{
+    background-color: #F3FFD8;
+    color: #353D2F;
 }

@@ -9,10 +9,10 @@ export default function Header(){
             <h1>PowerCycle</h1>
             <nav className="navHeader">
                 <Link className="liHeader" href="/">Home</Link>
-                <Link className="liHeader" href="/">Produtos</Link>
-                <Link className="liHeader" href="/sobre">Sobre</Link>
+                <Link className="liHeader" href="/Produtos">Produtos</Link>
+                <Link className="liHeader" href="/Sobre">Sobre</Link>
             </nav>
-            {/* {user?.nome == ''? "" : (<button className="rounded-md bg-red-600 text-white p-2" onClick={logout}>Deslogar</button>)} */}
+            <button className="btnlogin"> Fazer login</button>
         </header>
     )
 }
