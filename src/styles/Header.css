@@ -16,6 +16,9 @@
     justify-content: space-around;
     margin-left: 20px;
 }
+.linkH{
+    text-decoration: none;
+}
 .liHeader{
     text-decoration: none;
     color: #353D2F;

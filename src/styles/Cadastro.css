@@ -1,0 +1,75 @@
+.mCadastro {
+    background-color: #3C4430;
+    color: #F3FFD8;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cadastroSection {
+      background-color: #515B3A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+   
+    text-align: center;
+  }
+  
+  .cadastroSection h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #A9C980;
+  }
+  
+  .cadastroSection p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cadastroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formGroup {
+    text-align: left;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #F3FFD8;
+    color: #353D2F;
+  }
+  
+  .cadastroButton {
+    background-color: #353D2F;
+    color: #F3FFD8;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #353D2F;
+    transition: background-color 0.3s;
+  }
+  
+  .cadastroButton:hover {
+    background-color: #F3FFD8;
+    color: #353D2F;
+  }
+  
