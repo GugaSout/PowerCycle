@@ -1,9 +1,9 @@
 "use client";
 
+import { useUser } from "@/context/index";
 import "@/styles/Header.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useUser } from "@/context/index";
 import { useState } from "react";
 
 export default function Header() {
@@ -11,20 +11,19 @@ export default function Header() {
   const { user, setUser } = useUser();
   const [showLogout, setShowLogout] = useState(false);
 
-  const handleLoginClick = () => {
-    if (!user) {
-      router.push("/Login");
-    }
-  };
-
   const handleLogout = () => {
-    setUser(null); 
-    setShowLogout(false); 
-    router.push("/"); 
+    setUser(null); // Desloga o usuário
+    setShowLogout(false); // Fecha o menu de logout
+    router.push("/"); // Redireciona para a página inicial
   };
 
   const toggleLogout = () => {
-    setShowLogout((prev) => !prev); 
+    setShowLogout((prev) => !prev); // Alterna o estado de exibição do botão de deslogar
+  };
+
+  const handleLoginClick = () => {
+    // Redireciona o usuário para a página de login
+    router.push("/Login");
   };
 
   return (
@@ -50,9 +49,9 @@ export default function Header() {
         </div>
       ) : (
         <div className="dUser">
-        <button className="btnlogin" onClick={handleLoginClick}>
-          Fazer login
-        </button>
+          <button className="btnLogin" onClick={handleLoginClick}>
+            Fazer login
+          </button>
         </div>
       )}
     </header>

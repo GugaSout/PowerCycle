@@ -1,29 +1,40 @@
 "use client";
 
-import "@/styles/Login.css";
-import Link from "next/link";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useUser } from "@/context/index";
+import "@/styles/Login.css";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Login() {
-    const router = useRouter();
     const { setUser } = useUser();
+    const router = useRouter();
 
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [senha, setSenha] = useState("");
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        // Simula uma requisição de login
-        const fakeUser = { nome: "Gustavo Souto", email }; // Nome de exemplo
+        try {
+            const response = await fetch("http://localhost:3000/api/base-usuario");
+            const data = await response.json();
 
-        // Atualiza o contexto do usuário
-        setUser(fakeUser);
+            const loggedInUser = data.find(
+                (dbUser: { email: string; senha: string }) =>
+                    dbUser.email === email && dbUser.senha === senha
+            );
 
-        // Redireciona o usuário para a página inicial
-        router.push("/");
+            if (loggedInUser) {
+                setUser(loggedInUser);
+                alert(`Bem-vindo, ${loggedInUser.nome}!`);
+                router.push("/"); // Redireciona para a home
+            } else {
+                alert("E-mail ou senha inválidos.");
+            }
+        } catch (error) {
+            console.error("Erro ao processar login:", error);
+            alert("Erro ao tentar fazer login. Tente novamente mais tarde.");
+        }
     };
 
     return (
@@ -45,21 +56,23 @@ export default function Login() {
                         />
                     </div>
                     <div className="formGroup">
-                        <label htmlFor="password">Senha</label>
+                        <label htmlFor="senha">Senha</label>
                         <input
                             type="password"
-                            id="password"
-                            name="password"
+                            id="senha"
+                            name="senha"
                             placeholder="Digite sua senha"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
                             required
                         />
                     </div>
-                    <button type="submit" className="loginButton">Entrar</button>
+                    <button type="submit" className="loginButton">
+                        Entrar
+                    </button>
                 </form>
                 <p className="signupPrompt">
-                    Não tem uma conta? <Link href="/Cadastro">Cadastre-se aqui</Link>.
+                    Não tem uma conta? <a href="/Cadastro">Cadastre-se aqui</a>.
                 </p>
             </section>
         </main>
