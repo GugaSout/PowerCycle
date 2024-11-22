@@ -36,13 +36,38 @@
     background-color: #353D2F;
     color: #F3FFD8;
     padding: 10px;
-    position: absolute;
-    right: 40px;
     border-radius: 10px;
     border: 2px solid #353D2F;
     transition: 0.5s;
 }
 .btnlogin:hover{
+    background-color: #F3FFD8;
+    color: #353D2F;
+}
+.dUser{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
+}
+.userName{
+    color: #353D2F;
+    font-size: 1.2em;
+    border-bottom: 2px solid #353D2F;
+    padding: 2px 3px;
+    cursor: pointer;
+    
+}
+.btnLogout{
+    background-color: #353D2F;
+    color: #F3FFD8;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #353D2F;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+.btnLogout:hover{
     background-color: #F3FFD8;
     color: #353D2F;
 }
