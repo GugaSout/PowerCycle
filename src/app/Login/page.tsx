@@ -38,43 +38,45 @@ export default function Login() {
     };
 
     return (
-        <main className="mLogin">
-            <section className="loginSection">
-                <h1>Login</h1>
-                <p>Entre com sua conta para acessar nossos serviços.</p>
-                <form className="loginForm" onSubmit={handleSubmit}>
-                    <div className="formGroup">
-                        <label htmlFor="email">E-mail</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Digite seu e-mail"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="formGroup">
-                        <label htmlFor="senha">Senha</label>
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                            placeholder="Digite sua senha"
-                            value={senha}
-                            onChange={(e) => setSenha(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="loginButton">
-                        Entrar
-                    </button>
-                </form>
-                <p className="signupPrompt">
-                    Não tem uma conta? <a href="/Cadastro">Cadastre-se aqui</a>.
-                </p>
-            </section>
-        </main>
+        <>
+            <main className="mLogin">
+                <section className="loginSection">
+                    <h1>Login</h1>
+                    <p>Entre com sua conta para acessar nossos serviços.</p>
+                    <form className="loginForm" onSubmit={handleSubmit}>
+                        <div className="formGroup">
+                            <label htmlFor="email">E-mail</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Digite seu e-mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="formGroup">
+                            <label htmlFor="senha">Senha</label>
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                value={senha}
+                                onChange={(e) => setSenha(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="loginButton">
+                            Entrar
+                        </button>
+                    </form>
+                    <p className="signupPrompt">
+                        Não tem uma conta? <a href="/Cadastro">Cadastre-se aqui</a>.
+                    </p>
+                </section>
+            </main>
+        </>
     );
 }
